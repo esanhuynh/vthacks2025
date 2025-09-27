@@ -15,7 +15,7 @@ def save_to_txt(data: str, filename: str = "research_output.txt"):
 save_tool = Tool(
     name="save_text_to_file",
     func=save_to_txt,
-    description="Saves structured research data to a text file.",
+    description="Saves structured research data to.",
 )
 
 search = DuckDuckGoSearchRun()
