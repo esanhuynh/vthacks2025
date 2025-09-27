@@ -15,7 +15,7 @@
             <div class="brand">
                 <img src="logo.svg" alt="" class="logo">
                 <div class="brand-text">
-                    <h1>Blacksbirg Housing</hi>
+                    <h1>Blacksbrg Housing</hi>
                         <p class="muted">Find places that fit your budget, commute, and vibe.</p>
                 </div>
             </div>
@@ -30,10 +30,51 @@
                 <div class="hero-copy">
                     <h2>Smart matching for Virginia Tech students</h2>
                     <p>
-                        
+                        Filter by price, bedrooms, commute time to campus, and amenities.
+                        Save favorites and compare options side-by-side. Your team can plug in
+                        real data from Databricks later.
                     </p>
+                    <a class="btn primary" href="#search">Start your search</a>
                 </div>
+                <div class="hero-illus" role="img" aria-label="Illustrion of house matching UI"></div>
             </selection>
+
+            <section id="search" class="panel">
+                <form id="filterForm" class="filters" aria-label="Housing search filters">
+                    <div class="field">
+                        <label for="q">Keyword</label>
+                        <input id="q" name="q" type="search" placeholder="e.g., Foxridge, 2BR near BT bus" />
+                    </div>
+
+                    <div class="field">
+                        <label for="budget">Max Budget ($/mo)</label>
+                        <input id="budget" name="budget" type="number" min="300" step="25" placeholder="900" />
+                    </div>
+
+                    <div class="field">
+                        <label for="beds">Bedrooms</label>
+                        <select id="beds" name="beds">
+                            <option value="">Any</option>
+                            <option>Studio</option>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    </div>
+                    
+                    <div class="field">
+                        <label for="distance">Max Distance to VT (mi)</label>
+                        <input id="distance" name="distance" type="number" min="0" step="0.1" placeholder="2.5" />
+                    </div>
+
+                    <fieldset class="field check-row">
+                        <legend>Amenities</legend>
+                        <label><input type="checkbox" name="amenities" value="parking"> Parking</label>
+                        <label><input type="checkbox" name="amenities" value="laundry"> In-unit Laundry</label>
+                    </fieldset>
+                </form>
+            </section>
         </main>
     </body>
 </html>
